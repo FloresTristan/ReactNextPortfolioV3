@@ -28,7 +28,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                 ></img>
                             </Popover.Button>
                         </div>
-                        <Popover.Panel className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md">
+                        <Popover.Panel className="absolute right-0 z-10 w-11/12 p-4 shadow-md rounded-md">
                             {!isBlog ? (
                                 <div className="grid grid-cols-1">
                                     <Button onClick={handleWorkScroll}>
@@ -87,7 +87,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                     </>
                 )}
             </Popover>
-            <div className="mt-10 flex flex-row items-center justify-between sticky bg-white top-0 z-10 hidden tablet:flex">
+            <div className="mt-10 flex flex-row items-center justify-between sticky top-0 z-10 hidden tablet:flex">
                 <h1
                     onClick={() => router.push("/")}
                     className="font-medium cursor-pointer mob:p-2 laptop:p-0"

@@ -3,6 +3,7 @@ module.exports = {
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
+    darkMode: true,
     theme: {
         screens: {
             mob: "375px",
@@ -13,5 +14,10 @@ module.exports = {
         },
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require('daisyui')
+    ],
+    daisyui:{
+        themes: ['luxury'],
+    }
 };

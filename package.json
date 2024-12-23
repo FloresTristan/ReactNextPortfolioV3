@@ -29,6 +29,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "daisyui": "^4.12.22",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6"
   }
