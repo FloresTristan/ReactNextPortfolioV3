@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 const WorkCard = ({ img, name, description, onClick }) => {
     return (
@@ -7,14 +8,17 @@ const WorkCard = ({ img, name, description, onClick }) => {
             onClick={onClick}
         >
             <div
-                className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-95 h-48 mob:h-auto"
-                style={{ height: "600px" }}
-            >
-                <img
+                className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-95 h-48  mob:h-auto"
+                style={{ height: "600px" }}>
+                <Image
                     alt={name}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover rounded-md"
                     src={img}
-                ></img>
+                    width={600}
+                    height={600}
+                    // layout="fill"
+                    // objectFit="cover"
+                />
             </div>
             <h1 className="mt-5 text-3xl font-medium">
                 {name ? name : "Project Name"}

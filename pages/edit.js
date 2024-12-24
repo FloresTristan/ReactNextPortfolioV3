@@ -117,7 +117,7 @@ const Edit = () => {
     <div className="container mx-auto">
       <Header></Header>
       <div className="mt-10">
-        <div className="bg-white z-10 sticky top-12">
+        <div className="bg-black z-10 sticky top-12">
           <div className="flex items-center justify-between">
             <h1 className="text-4xl">Dashboard</h1>
             <div className="flex items-center">
