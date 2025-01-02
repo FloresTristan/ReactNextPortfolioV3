@@ -1,7 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
 import React from "react";
 import Button from "../Button";
 import { Popover } from "@headlessui/react";
+import { MdMenu } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 // Local Data
 import data from "../../data/portfolio.json";
 
@@ -12,7 +16,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
             <Popover className="block tablet:hidden mt-5">
                 {({ open }) => (
                     <>
-                        <div className="flex bg-black items-center justify-between p-2 laptop:p-0">
+                        <div className="flex bg-black rounded-xl items-center justify-between p-2 laptop:p-0">
                             <h1
                                 onClick={() => router.push("/")}
                                 className="font-medium cursor-pointer p-2 laptop:p-0"
@@ -20,15 +24,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                 {data.name}.
                             </h1>
                             <Popover.Button>
-                                <img
-                                    className="h-5"
+                                {/* <img
+                                    className="h-5 "
                                     src={`/images/${
                                         !open ? "menu.svg" : "cancel.svg"
                                     }`}
-                                ></img>
+                                ></img> */}
+                                {open ? (
+                                    <IoMdClose  size={30} color="white" />
+                                ) : (
+                                    <MdMenu size={30} color="white" />
+                                )}
                             </Popover.Button>
                         </div>
-                        <Popover.Panel className="absolute right-0 z-10 w-11/12 p-4 shadow-md rounded-md">
+                        <Popover.Panel className="absolute mt-1 bg-black bg-opacity-90 z-10 w-[96vw] p-4 shadow-md rounded-md">
                             {!isBlog ? (
                                 <div className="grid grid-cols-1">
                                     <Button onClick={handleWorkScroll}>
@@ -87,10 +96,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                     </>
                 )}
             </Popover>
-            <div className="mt-10 flex flex-row items-center justify-between bg-black sticky top-0 z-10 hidden tablet:flex">
+            <div className=" mt-10 flex flex-row items-center justify-between bg-black rounded-lg hidden sticky top-0 z-10 tablet:flex">
                 <h1
                     onClick={() => router.push("/")}
-                    className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+                    className="font-medium cursor-pointer mob:p-2 laptop:p-3"
                 >
                     {data.name}.
                 </h1>
