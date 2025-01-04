@@ -96,10 +96,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                     </>
                 )}
             </Popover>
-            <div className=" mt-10 flex flex-row items-center justify-between bg-black rounded-lg hidden sticky top-0 z-10 tablet:flex">
+            <div className=" mt-10 flex flex-row items-center justify-between bg-black rounded-xl hidden sticky top-0 z-10 tablet:flex">
                 <h1
                     onClick={() => router.push("/")}
-                    className="font-medium cursor-pointer mob:p-2 laptop:p-3"
+                    className="font-medium text-xl cursor-pointer mob:p-2 laptop:p-3"
                 >
                     {data.name}.
                 </h1>
