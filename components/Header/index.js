@@ -37,7 +37,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                 )}
                             </Popover.Button>
                         </div>
-                        <Popover.Panel className="absolute mt-1 bg-black bg-opacity-90 z-10 w-[96vw] p-4 shadow-md rounded-md">
+                        <Popover.Panel className="absolute mt-1 bg-black bg-opacity-90 z-10 w-auto right-4 p-4 shadow-md rounded-md">
                             {!isBlog ? (
                                 <div className="grid grid-cols-1">
                                     <Button onClick={handleWorkScroll}>
@@ -59,7 +59,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                     <Button
                                         onClick={() =>
                                             window.open(
-                                                "mailto:hello@chetanverma.com"
+                                                "mailto:michaeltristanflores646@gmail.com"
                                             )
                                         }
                                     >
@@ -84,7 +84,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                     <Button
                                         onClick={() =>
                                             window.open(
-                                                "mailto:hello@chetanverma.com"
+                                                "mailto:michaeltristanflores646@gmail.com"
                                             )
                                         }
                                     >
@@ -104,22 +104,39 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                     {data.name}.
                 </h1>
                 {!isBlog ? (
-                    <div className="flex">
-                        <Button onClick={handleWorkScroll}>Projects</Button>
-                        <Button onClick={handleAboutScroll}>About</Button>
-                        <Button onClick={handleDasScroll}>DAS</Button>
-                        {data.showBlog && (
-                            <Button onClick={() => router.push("/blog")}>
-                                Blog
+                    <div className="">
+                        <div className="flex">
+                            <Button onClick={handleWorkScroll}>Projects</Button>
+                            <Button onClick={handleAboutScroll}>About</Button>
+                            <Button onClick={handleDasScroll}>DAS</Button>
+                            {data.showBlog && (
+                                <Button onClick={() => router.push("/blog")}>
+                                    Blog
+                                </Button>
+                            )}
+                            <Button
+                                onClick={() =>
+                                    window.open("mailto:michaeltristanflores646@gmail.com")
+                                }
+                            >
+                                Contact
                             </Button>
-                        )}
-                        <Button
-                            onClick={() =>
-                                window.open("mailto:hello@chetanverma.com")
-                            }
-                        >
-                            Contact
-                        </Button>
+                        </div>
+                        <div className="max-w-xl mx-auto rounded-full mb-1 py-1 px-2 bg-yellow-600 w-full">
+                            <input type="range" min="1" max="4"   className="w-full"
+                                onChange={(e) => {
+                                    if (e.target.value === "1") {
+                                        handleWorkScroll();
+                                    } else if (e.target.value === "2") {
+                                        handleAboutScroll();
+                                    } else if (e.target.value === "3") {
+                                        handleDasScroll();
+                                    } else if (e.target.value === "4") {
+                                        router.push("https://www.youtube.com/watch?v=k85mRPqvMbE");
+                                    }
+                                }}
+                            />
+                        </div>
                     </div>
                 ) : (
                     <div className="flex">
@@ -131,7 +148,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                         )}
                         <Button
                             onClick={() =>
-                                window.open("mailto:hello@chetanverma.com")
+                                window.open("mailto:michaeltristanflores646@gmail.com")
                             }
                         >
                             Contact
