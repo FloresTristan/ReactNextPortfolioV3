@@ -122,7 +122,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                 Contact
                             </Button>
                         </div>
-                        <div className="max-w-xl mx-auto rounded-full mb-1 py-1 px-2 bg-yellow-600 w-full">
+                        {/* <div className="max-w-xl mx-auto rounded-full mb-1 py-1 px-2 bg-yellow-600 w-full">
                             <input type="range" min="1" max="4"   className="w-full"
                                 onChange={(e) => {
                                     if (e.target.value === "1") {
@@ -136,7 +136,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleDasScroll, isBlog }
                                     }
                                 }}
                             />
-                        </div>
+                        </div> */}
                     </div>
                 ) : (
                     <div className="flex">
